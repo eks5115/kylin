@@ -136,6 +136,7 @@ public class CubingJob extends DefaultChainedExecutable {
         }
 
         CubingJob result = new CubingJob();
+        result.initConfig(kylinConfig);
         SimpleDateFormat format = new SimpleDateFormat("z yyyy-MM-dd HH:mm:ss");
         format.setTimeZone(TimeZone.getTimeZone(config.getTimeZone()));
         result.setDeployEnvName(kylinConfig.getDeployEnv());
